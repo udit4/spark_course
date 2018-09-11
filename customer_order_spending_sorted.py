@@ -27,3 +27,5 @@ rows = rows.reduceByKey(lambda x, y:x[1] + y[1])
 # swapping keys and values, so that transformation can be applied directly.
 rows = rows.map(lambda x : (x[1], x[0]))
 
+rows = rows.sortByKey()
+
